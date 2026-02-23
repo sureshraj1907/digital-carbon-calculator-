@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Carbon Footprint Calculator</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #00c6ff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #00c6ff;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00a2d3;
+        }
+
+        .note {
+            font-size: 13px;
+            margin-top: 20px;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Digital Carbon Footprint Calculator</h1>
+
+        <form action="/calculate" method="POST">
+
+            <label>Car Travel (km per day)</label>
+            <input type="number" name="car" required>
+
+            <label>Internet Usage (hours per day)</label>
+            <input type="number" name="internet" required>
+
+            <label>Mobile Usage (hours per day)</label>
+            <input type="number" name="mobile" required>
+
+            <label>Streaming (hours per day)</label>
+            <input type="number" name="streaming" required>
+
+            <label>Gaming (hours per day)</label>
+            <input type="number" name="gaming" required>
+
+            <label>Social Media (hours per day)</label>
+            <input type="number" name="social" required>
+
+            <label>Laptop Usage (hours per day)</label>
+            <input type="number" name="laptop" required>
+
+            <button type="submit">Calculate Monthly Footprint</button>
+
+        </form>
+
+        <div class="note">
+            * All digital usage values are considered as daily average.  
+            Monthly carbon footprint is estimated automatically.
+        </div>
+
+    </div>
+
+</body>
+</html>

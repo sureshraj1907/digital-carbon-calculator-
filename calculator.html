@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Carbon Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Digital Carbon Footprint Calculator</h1>
+
+    <form action="/calculate" method="POST">
+
+        <input type="number" name="internet" placeholder="Internet Usage Hours" required>
+
+        <input type="number" name="streaming" placeholder="Streaming Hours" required>
+
+        <input type="number" name="gaming" placeholder="Gaming Hours" required>
+
+        <input type="number" name="mobile" placeholder="Mobile Usage Hours" required>
+
+        <input type="number" name="car" placeholder="Car Travel (km per day)" required>
+
+        <input type="number" name="social" placeholder="Social Media Hours" required>
+
+        <input type="number" name="laptop" placeholder="Laptop Usage Hours" required>
+
+        <button type="submit">Calculate CO₂</button>
+
+    </form>
+</div>
+
+</body>
+</html>
